@@ -1,0 +1,13 @@
+package com.prepverse.backend.repository;
+
+import com.prepverse.backend.model.User;
+import com.prepverse.backend.model.UserMockTestResult;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import java.util.List;
+
+@Repository
+public interface UserMockTestResultRepository extends JpaRepository<UserMockTestResult, Long> {
+    List<UserMockTestResult> findByUser(User user);
+}

@@ -1,0 +1,56 @@
+[
+  {
+    "question_id": "PHY-KIN-001",
+    "question_text": "A ball is thrown vertically upwards. What is its velocity and acceleration at the highest point of its trajectory?",
+    "options": {
+      "a": "Velocity is zero, acceleration is zero.",
+      "b": "Velocity is zero, acceleration is 9.8 m/s² downwards.",
+      "c": "Velocity is non-zero, acceleration is zero.",
+      "d": "Velocity is non-zero, acceleration is 9.8 m/s² downwards."
+    },
+    "correct_options": ["b"],
+    "solution_text": "At the highest point, the instantaneous velocity of the ball is zero as it changes direction. However, the acceleration due to gravity (g) is always acting on it, which is approximately 9.8 m/s² in the downward direction.",
+    "exam": "IIT-JEE",
+    "subject": "Physics",
+    "chapter": "Kinematics",
+    "topic": "Motion under Gravity",
+    "difficulty": "Easy",
+    "question_type": "SingleCorrect"
+  },
+  {
+    "question_id": "CHEM-CB-001",
+    "question_text": "What is the hybridization of the central carbon atom in a molecule of methane (CH₄)?",
+    "options": {
+      "a": "sp",
+      "b": "sp²",
+      "c": "sp³",
+      "d": "sp³d"
+    },
+    "correct_options": ["c"],
+    "solution_text": "In methane (CH₄), the central carbon atom forms four single bonds with four hydrogen atoms. To form four equivalent sigma bonds, the carbon atom undergoes sp³ hybridization, mixing one 's' orbital and three 'p' orbitals.",
+    "exam": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Chemical Bonding",
+    "topic": "Hybridization",
+    "difficulty": "Easy",
+    "question_type": "SingleCorrect"
+  },
+  {
+    "question_id": "MATH-CALC-001",
+    "question_text": "What is the derivative of f(x) = x² * sin(x)?",
+    "options": {
+      "a": "2x * cos(x)",
+      "b": "2x * sin(x) - x² * cos(x)",
+      "c": "2x * sin(x) + x² * cos(x)",
+      "d": "x² * cos(x)"
+    },
+    "correct_options": ["c"],
+    "solution_text": "Using the product rule for differentiation, (uv)' = u'v + uv', where u = x² and v = sin(x). Then u' = 2x and v' = cos(x). Therefore, the derivative is (2x)(sin(x)) + (x²)(cos(x)).",
+    "exam": "IIT-JEE",
+    "subject": "Mathematics",
+    "chapter": "Calculus",
+    "topic": "Differentiation",
+    "difficulty": "Medium",
+    "question_type": "SingleCorrect"
+  }
+]
