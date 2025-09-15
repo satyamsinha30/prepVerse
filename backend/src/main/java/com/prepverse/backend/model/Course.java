@@ -4,9 +4,6 @@ import jakarta.persistence.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.HashSet;
-import java.util.Set;
-
 @Entity
 @Table(name = "courses")
 @Data
@@ -21,6 +18,4 @@ public class Course {
     private String description;
     private String exam;
 
-    @ManyToMany(mappedBy = "enrolledCourses")
-    private Set<User> enrolledUsers = new HashSet<>();
 }

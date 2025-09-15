@@ -1,11 +1,11 @@
 package com.prepverse.backend.service;
 
 import com.prepverse.backend.model.Contest;
-import com.prepverse.backend.model.User;
+import com.prepverse.backend.model.auth.User;
 import com.prepverse.backend.model.UserContestResult;
 import com.prepverse.backend.repository.ContestRepository;
 import com.prepverse.backend.repository.UserContestResultRepository;
-import com.prepverse.backend.repository.UserRepository;
+import com.prepverse.backend.repository.auth.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

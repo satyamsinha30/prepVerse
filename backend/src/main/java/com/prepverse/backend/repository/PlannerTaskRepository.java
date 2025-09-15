@@ -1,7 +1,7 @@
 package com.prepverse.backend.repository;
 
 import com.prepverse.backend.model.PlannerTask;
-import com.prepverse.backend.model.User;
+import com.prepverse.backend.model.auth.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

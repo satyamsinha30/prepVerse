@@ -1,11 +1,11 @@
 package com.prepverse.backend.service;
 
 import com.prepverse.backend.model.MockTest;
-import com.prepverse.backend.model.User;
+import com.prepverse.backend.model.auth.User;
 import com.prepverse.backend.model.UserMockTestResult;
 import com.prepverse.backend.repository.MockTestRepository;
 import com.prepverse.backend.repository.UserMockTestResultRepository;
-import com.prepverse.backend.repository.UserRepository;
+import com.prepverse.backend.repository.auth.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

@@ -2,10 +2,10 @@ package com.prepverse.backend.service;
 
 import com.prepverse.backend.model.Note;
 import com.prepverse.backend.model.Question;
-import com.prepverse.backend.model.User;
+import com.prepverse.backend.model.auth.User;
 import com.prepverse.backend.repository.NoteRepository;
 import com.prepverse.backend.repository.QuestionRepository;
-import com.prepverse.backend.repository.UserRepository;
+import com.prepverse.backend.repository.auth.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

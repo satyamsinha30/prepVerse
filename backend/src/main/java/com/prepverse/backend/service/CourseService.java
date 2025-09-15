@@ -1,9 +1,11 @@
 package com.prepverse.backend.service;
 
 import com.prepverse.backend.model.Course;
-import com.prepverse.backend.model.User;
+import com.prepverse.backend.model.UserEnrolledCourse;
+import com.prepverse.backend.model.auth.User;
 import com.prepverse.backend.repository.CourseRepository;
-import com.prepverse.backend.repository.UserRepository;
+import com.prepverse.backend.repository.UserEnrolledCourseRepository;
+import com.prepverse.backend.repository.auth.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -18,6 +20,9 @@ public class CourseService {
 
     @Autowired
     private UserRepository userRepository;
+
+    @Autowired
+    private UserEnrolledCourseRepository userEnrolledCourseRepository;
 
     public List<Course> getAllCourses() {
         return courseRepository.findAll();
@@ -47,21 +52,18 @@ public class CourseService {
         Course course = courseRepository.findById(courseId).orElseThrow(() -> new RuntimeException("Course not found"));
         User user = userRepository.findById(userId).orElseThrow(() -> new RuntimeException("User not found"));
 
-        course.getEnrolledUsers().add(user);
-        user.getEnrolledCourses().add(course);
+        UserEnrolledCourse userEnrolledCourse = new UserEnrolledCourse(user, course);
+        userEnrolledCourseRepository.save(userEnrolledCourse);
 
-        userRepository.save(user); // Save user to update enrolledCourses
-        return courseRepository.save(course); // Save course to update enrolledUsers
+        return course;
     }
 
     public Course removeUserFromCourse(Long courseId, Long userId) {
         Course course = courseRepository.findById(courseId).orElseThrow(() -> new RuntimeException("Course not found"));
         User user = userRepository.findById(userId).orElseThrow(() -> new RuntimeException("User not found"));
 
-        course.getEnrolledUsers().remove(user);
-        user.getEnrolledCourses().remove(course);
+        userEnrolledCourseRepository.deleteByUser_IdAndCourse_Id(user.getId(), course.getId());
 
-        userRepository.save(user); // Save user to update enrolledCourses
-        return courseRepository.save(course); // Save course to update enrolledUsers
+        return course;
     }
 }

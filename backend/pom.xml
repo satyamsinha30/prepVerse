@@ -54,6 +54,13 @@
 			<scope>runtime</scope>
 		</dependency>
 
+		<!-- OpenAPI/Swagger for API documentation -->
+		<dependency>
+			<groupId>org.springdoc</groupId>
+			<artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+			<version>2.2.0</version>
+		</dependency>
+
 		<!-- Utility to reduce boilerplate code (getters, setters, etc.) -->
 		<dependency>
 			<groupId>org.projectlombok</groupId>
@@ -68,12 +75,14 @@
 			<scope>test</scope>
 		</dependency>
 
-		<!-- H2 Database for in-memory testing -->
+		<!-- PostgreSQL Driver -->
 		<dependency>
-			<groupId>com.h2database</groupId>
-			<artifactId>h2</artifactId>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
 			<scope>runtime</scope>
 		</dependency>
+
+		<!-- Utility to reduce boilerplate code (getters, setters, etc.) -->
 		<dependency>
 			<groupId>org.springframework.security</groupId>
 			<artifactId>spring-security-test</artifactId>

@@ -1,5 +1,6 @@
 package com.prepverse.backend.model;
 
+import com.prepverse.backend.model.auth.User;
 import jakarta.persistence.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;

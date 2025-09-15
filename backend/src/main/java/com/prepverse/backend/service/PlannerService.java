@@ -1,9 +1,9 @@
 package com.prepverse.backend.service;
 
 import com.prepverse.backend.model.PlannerTask;
-import com.prepverse.backend.model.User;
+import com.prepverse.backend.model.auth.User;
 import com.prepverse.backend.repository.PlannerTaskRepository;
-import com.prepverse.backend.repository.UserRepository;
+import com.prepverse.backend.repository.auth.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

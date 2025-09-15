@@ -11,6 +11,7 @@ import ContestsPage from './pages/ContestsPage';
 import NotesPage from './pages/NotesPage';
 import PlannerPage from './pages/PlannerPage';
 import ProfilePage from './pages/ProfilePage';
+import SignupPage from './pages/SignupPage';
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
           <Route path="/notes" element={<NotesPage />} />
           <Route path="/planner" element={<PlannerPage />} />
           <Route path="/profile" element={<ProfilePage />} />
+          <Route path="/signup" element={<SignupPage />} />
         </Routes>
       </main>
     </div>
